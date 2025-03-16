@@ -22,7 +22,7 @@ const App = () => {
     let mixer;
     const loader = new GLTFLoader();
     loader.load(
-      '/plane.glb',
+      '/saturn_planet.glb',
       function (gltf) {
         bee = gltf.scene;
         bee.scale.set(0.5, 0.5, 0.5)
