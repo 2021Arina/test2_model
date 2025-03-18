@@ -25,10 +25,10 @@ const App = () => {
       '/saturn_planet.glb', // загрузка модели
       function (gltf) {
         bee = gltf.scene;
-        bee.scale.set(0.5, 0.5, 0.5)
+        bee.scale.set(0.7, 0.7, 0.7)
         bee.position.y = 0;
-        bee.position.x = 2;
-        bee.rotation.y = 1.5;
+        bee.position.x = 1;
+        bee.rotation.y = 1;
         scene.add(bee);
         mixer = new THREE.AnimationMixer(bee);
         mixer.clipAction(gltf.animations[0]).play();
