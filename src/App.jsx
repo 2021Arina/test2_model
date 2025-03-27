@@ -22,10 +22,10 @@ const App = () => {
     let mixer;
     const loader = new GLTFLoader();
     loader.load(
-      '/saturn_planet.glb', // загрузка модели
+      '/mars.glb', // загрузка модели
       function (gltf) {
         bee = gltf.scene;
-        bee.scale.set(0.7, 0.7, 0.7)
+        bee.scale.set(1, 1, 1)
         bee.position.y = 0;
         bee.position.x = 1;
         bee.rotation.y = 1;
@@ -53,9 +53,15 @@ const App = () => {
     const ambientLight = new THREE.AmbientLight(0xffffff, 1.3);
     scene.add(ambientLight);
 
-    const topLight = new THREE.DirectionalLight(0xffffff, 1);
+    const topLight = new THREE.DirectionalLight(0xffffff, 2);
     topLight.position.set(500, 500, 500);
     scene.add(topLight);
+
+    const secondLight = new THREE.DirectionalLight(0xffffff, 1.5);
+    secondLight.position.set(-500, 200, 1000);
+    scene.add(secondLight);
+ 
+
 
     const reRender3D = () => {
       requestAnimationFrame(reRender3D);
